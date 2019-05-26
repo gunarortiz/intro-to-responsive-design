@@ -1,0 +1,206 @@
+/* fuente de Google fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+/* propiedad que necesita una pagina responsiva */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+    margin: 0px; /* eliminar los margenes que tiene por defecto una pagina web */
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* sistema de grillas */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+
+
+nav {
+    background: #333;
+    height: 35px;
+    padding: 10px 0px 0px 10px;
+    display: flex;
+}
+
+ul {
+    display: flex;
+    color: white;
+    margin: 7px 0 0 0;
+    list-style: none;
+    float: right;
+}
+
+ul li {
+    margin-right: 15px;
+}
+
+.lateral {
+    background: #ececec;
+    padding: 15px;
+}
+
+.cuerpo {
+    padding: 15px;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    font-size: 13px;
+    margin-top: -10px;
+}
+
+.boton {
+    background: red;
+    color: white;
+    border-width: 0px ;
+    display: none;
+    margin-left: 10px;
+}
+
+/* la pagina por defecto no ocupa todo el alto de la ventana, con esto le obligamos a que lo ocupe */
+.row, .lateral, body, html {
+    height: 100%;
+}
+
+
+/* cabecera con el video */
+header {
+  height: 400px;
+  position: relative;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  
+}
+
+.titulo{
+  position: absolute;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+h1.principal {
+  color: #fff;
+  font-size: 4rem;
+  text-transform: uppercase;
+  z-index: 2;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.23);
+  text-align: center;
+}
+
+.cuerpo .row {
+  height: initial;
+  margin-bottom: 15px;
+}
+
+.row .col-1 {
+  height: 30px;
+}
+
+
+/* menu desplegable */
+
+.dropdown {
+  color: white;
+  margin: 7px 0 0 0;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  color: black;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  margin-top: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 10px 10px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* media queries */
+@media (max-width: 650px) {
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+        width: 100%;
+      }
+
+      ul {
+          display: none;
+      }
+
+      .boton {
+        display: block;
+    }
+
+    .lateral {
+        height: initial;
+    }
+
+    header {
+      height: 300px;
+    }
+
+    h1.principal {
+      font-size: 2rem;
+    }
+
+}
